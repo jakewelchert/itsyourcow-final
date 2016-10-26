@@ -1,0 +1,23 @@
+{#
+ # Basic page template
+ # -------------------
+ #
+ #}
+
+{% extends "_layout" %}
+{% set title = entry.title %}
+
+{% block content %}
+  <div class='container-header row'>
+    <div class='ten columns offset-by-one'>
+      <h1 class='header'>{{ entry.title }}</h1>
+      {{ entry.body }}     
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='eight columns offset-by-two news'>
+    {{ entry.body }}
+    </div>
+  </div>
+{% endblock %}

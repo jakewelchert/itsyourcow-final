@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>It's Your Cow</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name='viewport' content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+  <script src="https://use.typekit.net/sji7aye.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/master.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+
+<header class="header">
+  <a href="index.html" class='header-logo'><img src='img/logo.png'></a>
+  
+  <nav class="header-nav">
+    <ul>
+      <li><a href='http://itsyourcow.com/collections/products'>Buy A Cow!</a></li>
+      <li><a href='thewhy.html'>The Why</a></li>
+      <li><a href='thebenefits.html'>The Benefits</a></li>
+      <li><a href='theprocess.html'>The Process</a></li>
+      <li><a title='Shopping Cart' href='#'><i class="fa fa-lg fa-shopping-cart">&nbsp;(0)</i></a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="navbutton">
+  <a class="btn-open" href="#"></a>
+</div>
+
+<div class="overlay">
+  <a href="index.html" class='header-logo-mobile'><img src="img/logo-white.png"></a>
+  <div class="wrap">
+    <ul>
+      <li><a href='http://itsyourcow.com/collections/products'>Buy A Cow!</a></li>
+      <li><a href='thewhy.html'>The Why</a></li>
+      <li><a href='thebenefits.html'>The Benefits</a></li>
+      <li><a href='theprocess.html'>The Process</a></li>
+    </ul>
+  </div>
+</div>
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<div class='product-info-mobile center'>
+  <h5 class='header'>BUY A COW!</h5>     
+  <h1 class='header'>1/8 of a Beef</h1>
+</div>
+
+<div class='row product-header'>
+  <div class='fullsix product-main-img'></div>
+
+  <div class='fullsix product-info center'>
+    <div class='product-info-desktop'>
+      <h5 class='header'>BUY A COW!</h5>        
+      <h1 class='header'>1/8 of a Beef</h1>
+        <div class='product-filter row'>
+        <select id='my_selection2'>
+          <option value="">Different Size Share?</option>
+          <option value='1/8 of a Cow' href='http://its-your-cow.myshopify.com/collections/products/products/1-8-of-a-cow'>1/8 of a Beef</option>            
+          <option value='1/4 of a Cow' href='http://its-your-cow.myshopify.com/collections/products/products/1-4-of-a-cow'>1/4 of a Beef</option>
+        </select>
+      </div>
+      <script>
+      document.getElementById('my_selection2').onchange = function() {
+          window.location.href = this.children[this.selectedIndex].getAttribute('href');
+      }
+      </script>
+    </div>
+    
+    <div class='product-price'>
+      <ul>
+        <li>
+          <h4 class='red-txt'>Price Per Lb:</h4>
+          <h2><strong>$12.99/lb</strong></h2>
+        </li>
+        <li>
+          <h4 class='red-txt'>Deposit:</h4>
+          <h2><strong>$200</strong></h2>
+        </li>
+      </ul>
+    </div>
+      
+    <a href='#'><button class='btn-red btn-addtocart'>Add To Cart</button></a>
+
+    <div class='cardtypes'>
+      <a title='Its Your Cow Facebook' href='#'><img src='img/cardtypes.png'></a></li>
+    </div>
+
+    <div class='product-share'>
+      <ul>
+        <li><h5>SHARE PRODUCT:</h5></li>
+        <li><a title='Its Your Cow Facebook' href='#'><i class="fa fa-2x fa-facebook-official"></i></a></li>
+        <li><a title='Its Your Cow Twitter' href='#'><i class="fa fa-2x fa-twitter"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<section class='product-details'>
+  <div class='container'>
+  <div class='row'>
+    <div class='ten columns offset-by-one'>
+      <h2 class='red-txt'><strong>Details</strong></h2>
+      <p>An eighth beef share is half of a cow, split 4 ways. Approximately 40-55 lbs. depending on the size of the cow. This does not happen exactly evenly as some cuts are more plentiful than others. What we guarantee is to split half of beef equally 4 ways.</p>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section>
+  <div class='container'>
+  <div class='row'>
+    <div class='ten columns offset-by-one'>
+      <h2 class='red-txt'><strong>Cuts Included</strong></h2>
+      <p>Shipped to your door will be some tenderloin steaks, ny strip steaks, rib-eye steaks, sirloin steaks, sirloin tip steaks, short ribs, chuck roasts, arm roasts, round roasts and ground beef. In addition, to round out your order, flank steak, brisket, or rump roast.</p>
+    </div>
+  </div>
+  </div>
+</section>
+
+<div class='container-meat'>
+  <div class='row product-meat'>
+    <div class='twelve columns'>
+      <img src='img/roast.png'>
+    </div>
+  </div>
+  <div class='row product-meat'>
+    <div class='twelve columns'>
+      <img src='img/roast.png'>
+    </div>
+  </div>
+  <div class='row product-meat'>
+    <div class='twelve columns'>
+      <img src='img/roast.png'>
+    </div>
+  </div>
+  <div class='row product-meat'>
+    <div class='twelve columns'>
+      <img src='img/roast.png'>
+    </div>
+  </div>
+  <div class='row product-meat'>
+    <div class='twelve columns'>
+      <img src='img/roast.png'>
+    </div>
+  </div>
+  <div class='row product-meat'>
+    <div class='twelve columns'>
+      <img src='img/roast.png'>
+    </div>
+  </div>
+  <div class='row product-meat'>
+    <div class='twelve columns'>
+      <img src='img/roast.png'>
+    </div>
+  </div>
+  <div class='row product-meat'>
+    <div class='twelve columns'>
+      <img src='img/roast.png'>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class='container'>
+  <div class='row'>
+    <div class='six columns'>
+      <h4 class='red-txt'>We Dry-Age Because it's better</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium venenatis quam, et auctor odio vulputate eu. Nam luctus auctor luctus. Suspendisse ullamcorper porta.</p>
+    </div>
+
+    <div class='six columns'>
+      <h4 class='red-txt'>Shipping</h4>
+      <p>Don’t like foam containers, neither do we. If you make the eco-friendly choice and buy a <a href='http://www.grizzlycoolers.com/'>Grizzly Cooler</a> we will pack your meat in the cooler and take X amount off your bill.</p>
+      <p class='red-txt'><strong>Lifetime warranty, made in the USA!</strong></p>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+<footer class='row'>
+  <div class='footer-right'>
+    <div class='footer-right-1 footer-nav'>
+      <a href='http://itsyourcow.com/collections/products'>Buy A Cow!</a>
+      <br>
+      <a href='thewhy.html'>The Why</a>
+      <br>  
+      <a href='thebenefits.html'>The Benefits</a>
+      <br>
+      <a href='theprocess.html'>The Process</a>
+    </div>
+
+    <div class='footer-right-2'>
+      <a href='#'>FAQ</a>
+      <br>
+      <a href='#'>Contact Us</a>
+      <br>  
+      <a href='news-archive.html'>News</a>
+    </div>
+
+    <div class='footer-right-3'>
+      <a href='#'>Support</a>
+      <br>
+      <a href='#'>Returns</a>
+      <br>  
+      <a href='#'>Shipping</a>
+    </div>
+
+    <div class='footer-right-4'>
+      <a href='#'>Wholesale</a>
+      <br>
+      <a href='#'>Terms Of Service</a>
+    </div>
+  
+    <div class='footer-right-bottom'>
+      <div class='bottom-left'>
+        <p><strong>Follow Us Online</strong></p>
+        <p>2016 It's Your Cow LLC.</p>
+      </div>
+      
+      <div class='footer-social'>
+        <a title='Its Your Cow Instagram' href='#'><i class="fa fa-lg fa-instagram"></i></a>
+        &nbsp;
+        <a title='Its Your Cow Facebook' href='#'><i class="fa fa-lg fa-facebook"></i></a>
+      </div>
+      <p>PHONE: 402-XXX-XXXX</p>
+    </div>
+  </div>
+
+  <div class='footer-left'>
+    <p>The best way to buy certified organic, certified grass-fed beef.</p>
+    <img src='img/logo-footer.png'>
+  </div>
+</footer>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="js/animate.js"></script>
+<script src='js/js.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+.interior-header-thebenefits {
+	background: url(../../img/thebenefits.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    padding: 80px 10px;
+    text-align: center;
+}
+
+.interior-header h1 {    
+	color: #fff;
+	text-shadow: 0px 0px 7px rgba(0,0,0,.4);
+	font-size: 40px;
+}
+
+	@media (min-width: 800px) {
+		.interior-header-thebenefits {
+		    padding: 125px 30px;
+		}
+
+		.interior-header h1 {    
+			font-size: 70px;
+		}
+	}
+
+.darr {
+	position: absolute;
+	right: 300px;
+	top: 500px;
+	font-size: 35px;
+}
+
+.gold {
+	background-color: #00ffe4;
+	padding: 150px 0;
+}
+
+.gold .container {
+	padding: 0px;
+}
+
+.gold .container h5 {
+	font-size: 50px;
+	margin-bottom: 25px;
+}
+
+.benefits-intro img {
+	width: 130px;
+	margin: 0 auto;
+	padding: 40px 0 30px;
+}
+
+	@media (max-width: 799px) {
+	.benefits-intro img {
+	width: 90px;
+	}
+	}
+
+.benefits-intro h4 {
+	color: #731e23;
+}
+
+.cowshare {
+	position: relative;
+	background: url(../../img/thebenefits-cowshare.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+	@media (max-width: 799px) {
+		.cowshare img {
+			max-width: 200px;
+			margin: 0 auto;
+			padding-bottom: 45px;
+		}
+	}
+
+.cowshare h1 {
+	padding-bottom: 45px;
+}

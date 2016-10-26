@@ -1,0 +1,25 @@
+.news img {
+	margin: 60px 0;
+}
+
+.share {
+	border-top: 1px solid #ddd;
+	padding-top: 50px;
+	margin-top: 50px;
+	text-align: center;
+}
+
+.share button {
+	max-width: 250px;
+	margin: 0 20px;
+	padding: 7px 30px 5px;
+}
+
+.share .facebook { background-color: #0071bc; color: #fff; border: none;}
+.share .facebook:hover { background-color: #005790; }
+
+.share .twitter { background-color: #12c1fd; color: #fff; border: none;}
+.share .twitter:hover { background-color: #1296c4; }
+
+.share .email { background-color: #CF0A2C; color: #fff; border: none;}
+.share .email:hover { background-color: #b10a27; }

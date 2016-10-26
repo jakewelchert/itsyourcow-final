@@ -1,0 +1,117 @@
+.cta img {
+	float: right;
+}
+
+.purchaseyourcow {
+	text-align: center;
+}
+
+.purchaseyourcow p {
+	margin: 10px 0 30px 0px;
+}
+
+footer { 
+	color: #c83232; 
+	padding: 70px 70px 75px 70px;
+	font-family: 'sofia-pro';
+	text-align: center;
+	border-top: 1px solid #ddd;
+}
+
+	@media (min-width: 900px) {
+		footer { 
+		text-align: left;
+		}
+	}
+
+
+.footer-left {
+	width: 100%;
+	text-align: center;
+	border-top: 1px solid #ddd;
+	padding-top: 50px;
+	margin-top: 50px; 
+}
+
+.footer-left img {
+	max-width: 400px;
+	margin: 0 auto
+}
+
+	@media (min-width: 900px) {
+	.footer-left {
+		width: 250px;
+		float: left;
+		text-align: left;
+		padding-top: 0px;
+		margin-top: 0px;
+		border-top: none;
+	}
+	}
+
+	@media (min-width: 1050px) {
+	.footer-left {
+		width: 350px;
+	}
+	}
+
+
+.footer-right {
+	position: relative;
+	width: 100%;
+	min-height: 240px;
+}
+
+	@media (min-width: 900px) {
+	.footer-right {
+		width: 55%;
+		float: right;
+		min-height: 240px;
+	}
+	}
+
+
+.footer-right-bottom p {
+	font-size: 15px;
+}
+
+footer .footer-nav {
+	font-family: 'sofia-pro';
+	font-weight: 800;
+}
+
+.footer-social {
+	padding-bottom: 15px;
+}
+
+
+.footer-right-1, .bottom-left, .footer-right-2, .footer-right-3, .footer-right-4 {
+	width: 100%;
+}
+
+.footer-right-1 {
+	padding-bottom: 20px;
+}
+
+.footer-right-bottom {
+	position: relative;
+}
+
+@media (min-width: 900px) {
+.footer-right-1, .bottom-left {
+	width: 40%;
+	float: left;
+	padding-bottom: 0;
+}
+
+.footer-right-2, .footer-right-3, .footer-right-4 {
+	width: 20%;
+	float: left;
+}
+
+.footer-right-bottom {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+}

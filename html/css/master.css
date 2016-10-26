@@ -1,0 +1,29 @@
+@import url(../css/normalize.css);
+
+/*    Global    */
+@import url(../css/_global/basestyles.css);
+@import url(../css/_global/typography.css);
+@import url(../css/_global/grid.css);
+@import url(../css/_global/buttons.css);
+@import url(../css/_global/forms.css);
+@import url(../css/_global/tables.css);
+@import url(../css/_global/lists.css);
+@import url(../css/_global/font-awesome.css);
+
+
+/*    Partials    */
+@import url(../css/_partials/header.css);
+@import url(../css/_partials/footer.css);
+@import url(../css/_partials/pagination.css);
+@import url(../css/_partials/nav.css);
+
+
+/*    Pages    */
+@import url(../css/_pages/news-archive.css);
+@import url(../css/_pages/news-single.css);
+@import url(../css/_pages/thebenefits.css);
+@import url(../css/_pages/thewhy.css);
+@import url(../css/_pages/theprocess.css);
+@import url(../css/_pages/productpage.css);
+@import url(../css/_pages/index.css);
+@import url(../css/_pages/404.css);

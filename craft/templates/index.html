@@ -1,0 +1,173 @@
+{#
+ # Homepage template
+ # ---------------
+ #
+ # When this template gets loaded, it will be because someone has accessed
+ # http://yoursite.com/ (without any URI). Craft checks to see if you have
+ # a Single section set to be the Homepage (as you do, by default), and
+ # loads the section’s Template (this file). A special ‘entry’ variable
+ # will already be set for you, assigned to the Homepage entry.
+ #
+ # It's worth noting that even if you didn't have a Homepage Single section,
+ # as long as this template remains at craft/templates/index.html, it
+ # would still be the one to get loaded when accessing http://yoursite.com/,
+ # albeit without an ‘entry’ variable already set for you.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+  <section class='home-intro home-header'>
+    <div class='container-header-index'>
+      <div class="row">
+        <div class='ten columns index-headline offset-by-one'>
+          <h1>Integrity, transparency, & a wholesome product.</h1>
+          <h5 class='red-txt'><a href='http://www.usda.gov/wps/portal/usda/usdahome?navid=organic-agriculture'>100% Certified Organic</a>, <a href='http://www.americangrassfed.org/'>Certified Grass-fed beef</a>.</br>Born and raised in the Sandhills of Nebraska—Dry-aged 14 days.</h5>
+          <a href='http://its-your-cow.myshopify.com/products/1-8-of-a-beef'><button class='btn-red'>Buy A Cow</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- <section id="home-video" class="ambient-video">
+  <div class="container">
+  <video width="1200" height="560" autoplay="" loop="" muted="" poster="http://bigomaha.co/wp-content/themes/bigomaha_2016_pre/assets/video/bigomaha_2016_bg.jpg">
+    <source src="http://bigomaha.co/wp-content/themes/bigomaha_2016_pre/assets/video/bigomaha_2016_bg.webm" type="video/webm">
+    <source src="http://bigomaha.co/wp-content/themes/bigomaha_2016_pre/assets/video/bigomaha_2016_bg.mp4" type="video/mp4">
+  </video>
+  <div class="button-container">
+    <a href="https://vimeo.com/185768523" class="button ghost popup-vimeo">Play Video</a>
+    </div>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAHCAIAAAEv4LDmAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEBJREFUeNpi/P//PwMDA0AAMUIogACCUhAAEEAoHCYGJAAQQCgyyICJAQcACCDsOphIMAS7KECA4XQJac6jgmoAL2UVAQeAHLcAAAAASUVORK5CYII=" class="sizer">
+  </div>
+</section> -->
+
+  <section class='tan about'>
+    <div class='home-about'>
+      <div class='home-about_copy ambient-video'>
+<!--         <div class='four columns'>
+          <a href='https://vimeo.com/154365618'><button class='btn-white'>Play Video</button></a>
+        </div> -->
+        <!-- <div class='eight columns'> -->
+          <div class="button-container center">
+            <a href="https://vimeo.com/185768523" class="button ghost popup-vimeo">Play Video</a>
+            </div>
+<!--             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAHCAIAAAEv4LDmAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEBJREFUeNpi/P//PwMDA0AAMUIogACCUhAAEEAoHCYGJAAQQCgyyICJAQcACCDsOphIMAS7KECA4XQJac6jgmoAL2UVAQeAHLcAAAAASUVORK5CYII=" class="sizer"> -->
+          </div>
+        <!-- </div> -->
+      </div>
+    </div>
+  </section>
+
+
+  <section class='tan process'>
+    <div class="container">
+      <div class="row">
+        <div class='twelve columns'>
+          <h1 class='header'>We’re trying to change things.</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class='ten center columns offset-by-one'>
+          <p>It’s Your Cow specifically addresses the lack of access and transparency when buying wholesome beef at the grocery store or online.</p>
+          <p>How do we do it? Simple:</p>
+        </div>
+      </div>
+      <div class='row center howwedoit'>
+        <div class='four columns'>
+          <h1>#1</h1>
+          <p>We raise the cattle in the sandhills of Nebraska.</p>
+        </div>
+        <div class='four columns'>
+          <h1>#2</h1>
+          <p>We own and operate the processing facility</p>
+        </div>
+        <div class='four columns'>
+          <h1>#3</h1>
+          <p>All your beef comes from one cow—your cow.</p>
+        </div>
+      </div>
+      <div class='row center'>
+        <a href='{{ url('thewhy.html') }}'><button class='btn-red change'>Learn Our Story</button></a>
+      </div>
+    </div>
+  </section>
+
+  <img src='{{ siteUrl }}img/cattle-home.png'>
+
+  <section class='tan'>
+    <div class="container">
+      <div class="row">
+        <div class='ten offset-by-one columns center'>
+          <h1 class='header'>The process is simple.</h1>
+          <p>Our supply chain goes like this: <strong>From the ranch, to the butcher, to you.</strong> No Feedlots, no cold storage facilities, no contracted processors, no middle men.</p>
+          <p>Everyone who handles your beef works for us. We maintain quality control of the entire experience. We are deeply vested in your experience with us, our livelihood depends on your satisfaction.</p>
+          <p class='red-txt'><strong>It’s Your Choice, It’s Your Cow.</strong></p>
+          <div class='process_logos'>
+            <ul>
+              <li>
+                <a target='_blank' href='http://www.americangrassfed.org/'><img src='{{ siteUrl }}img/logo_americangrassfed.png'></a>
+              </li>
+              <li>
+                <a target='_blank' href='http://www.usda.gov/wps/portal/usda/usdahome?navid=organic-agriculture'><img src='{{ siteUrl }}img/logo_usda.png'></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class='row'>
+    <img class='fullsix' src='{{ siteUrl }}img/home-1.png'>
+    <img class='fullsix' src='{{ siteUrl }}img/home-2.png'>
+  </div>
+  
+  <section class='lightblue'>
+    <div class='container'>
+      <div class='row'>
+        <div class='six columns offset-by-one cta-copy'>
+          <h1>Ready to make the choice?</h1>
+          <p>Order by the 1/8 or 1/4, we’ll process and ship it as soon as possible.</p>
+          <a href='http://its-your-cow.myshopify.com/products/1-8-of-a-beef'><button class='btn-red'>Buy A Cow</button></a>
+        </div>
+        <img class='five columns' src='{{ siteUrl }}img/2.gif'>
+      </div>
+    </div>
+  </section>
+
+  <section class='red'>
+    <div class='container'>
+      <div class="row">
+        <div class='ten columns offset-by-one'>
+          <h1 class='white header'>Latest News</h1>
+        </div>
+      </div>
+
+      <div class="row">        
+  		{% for entry in craft.entries.section('news').limit(3).find() %}
+        <div class='news-module four columns'>
+          <img src='{{ siteUrl }}img/4.png'>
+          <div class='news-module-text'>
+            <h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
+            <h5>Author Name</h5>
+            <h5>News  /  May 10 2016</h5>
+            <a href='{{ entry.url }}'>Read More</a>
+          </div>
+        </div>
+  		{% endfor %}
+      </div>
+
+      <div class='row'>
+        <div class='ten columns offset-by-one latest'>
+          <p><a href='{{ url('news') }}'><button class='tan'>View All News</button></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- {% include "_includes/cta" %} -->
+{% endblock %}

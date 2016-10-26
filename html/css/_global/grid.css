@@ -1,0 +1,179 @@
+/*********** BORDER BOX BEGIN ***********/
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*********** BORDER BOX END ***********/
+
+
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (min-width: 500px) {}
+@media (min-width: 1200px) {}
+
+.row2 {
+  display: flex; /* equal height of the children */
+}
+
+.col {
+  flex: 1; /* additionally, equal width */
+}
+
+.container, .container-fullwidth, .container-header, .container-meat {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box; 
+}
+
+.container-header-index {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 30px 200px;
+}
+
+.container, .container-fullwidth {
+  padding: 75px 50px;
+}
+
+.container-header {
+  padding: 50px;
+}
+
+.column,
+.columns,
+.fullfour,
+.fullsix,
+.fulleight {
+  position: relative;
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* For devices larger than 800px */
+@media (min-width: 800px) {
+  .container-header-index {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 75px 30px 175px;
+  }
+
+  .container, .container-fullwidth, .container-header, .container-meat {
+    max-width: 1100px;
+  }
+
+  .container, .container-fullwidth {
+    padding: 125px 50px;    
+  }
+
+  .notus .container, .indv-post {
+    padding: 100px 50px;    
+  }
+
+  .container-header {
+    padding: 8% 40px;    
+  }
+
+
+  .column,
+  .columns {
+    margin-left: 4%; 
+    box-sizing: border-box;}
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+
+  .one.column,
+  .one.columns                    { width: 4.66666666667%; }
+  .two.columns                    { width: 13.3333333333%; }
+  .three.columns                  { width: 22%;            }
+  .fullfour                       { width: 33.3333333333%; }
+  .four.columns                   { width: 30.6666666667%; }
+  .five.columns                   { width: 39.3333333333%; }
+  .six.columns                    { width: 48%;            }
+  .fullsix                        { width: 50%;            }
+  .seven.columns                  { width: 56.6666666667%; }
+  .eight.columns                  { width: 65.3333333333%; }
+  .fulleight                      { width: 66.6666666666%; }
+  .nine.columns                   { width: 74.0%;          }
+  .ten.columns                    { width: 82.6666666667%; }
+  .eleven.columns                 { width: 91.3333333333%; }
+  .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .one-third.column               { width: 30.6666666667%; }
+  .two-thirds.column              { width: 65.3333333333%; }
+
+  .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .offset-by-two.column,
+  .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .offset-by-three.column,
+  .offset-by-three.columns        { margin-left: 26%;            }
+  .offset-by-four.column,
+  .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .offset-by-five.column,
+  .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .offset-by-six.column,
+  .offset-by-six.columns          { margin-left: 52%;            }
+  .offset-by-seven.column,
+  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .offset-by-eight.column,
+  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .offset-by-nine.column,
+  .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .offset-by-ten.column,
+  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns     { margin-left: 52%; }
+}
+
+@media (min-width: 1024px) {
+  .container-header-index {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 150px 30px 300px;
+  }
+}
+
+
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box; }
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box; }
+.u-pull-right {
+  float: right; }
+.u-pull-left {
+  float: left; }
+
+
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Self Clearing Goodness */
+.container:after,
+.container-fullwidth:after,
+.row:after,
+.v-row:after,
+.bp-row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }

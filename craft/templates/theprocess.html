@@ -1,0 +1,109 @@
+{#
+ # theprocess template
+ # ---------------
+ #
+ # When this template gets loaded, it will be because someone has accessed
+ # http://yoursite.com/ (without any URI). Craft checks to see if you have
+ # a Single section set to be the Homepage (as you do, by default), and
+ # loads the section’s Template (this file). A special ‘entry’ variable
+ # will already be set for you, assigned to the Homepage entry.
+ #
+ # It's worth noting that even if you didn't have a Homepage Single section,
+ # as long as this template remains at craft/templates/index.html, it
+ # would still be the one to get loaded when accessing http://yoursite.com/,
+ # albeit without an ‘entry’ variable already set for you.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+
+  <section class='process-header interior-header-theprocess'>
+    <h1>Ready to make the choice?</h1>
+    <p class='txt-cntr'>Here's how the process works:</p>
+  </section>
+
+  <div class='container process-container'>
+    <ul class='theprocess'>
+    <li class='row'>
+      <div class='number-header'>
+        <div class='one columns offset-by-two'>
+          <h1>1</h1>
+        </div>
+        <div class='two columns'>
+          <img src='{{ siteUrl }}img/icon-1.png'>
+        </div>
+      </div>
+      <div class='five columns'>
+        <p>We list shares of certified organic, certified grass-fed cows; in eighths or quarters.</p>
+      </div>
+    </li>
+
+    <li class='row'>
+      <div class='one columns offset-by-two'>
+        <h1>2</h1>
+      </div>
+      <div class='two columns'>
+        <img src='{{ siteUrl }}img/icon-2.png'>
+      </div>
+      <div class='five columns'>
+        <p>You make the choice and purchase a share. <strong>Cowsource for a discounted $/lb.</strong></p>
+      </div>
+    </li>
+
+    <li class='row'>
+      <div class='one columns offset-by-two'>
+        <h1>3</h1>
+      </div>
+      <div class='two columns'>
+        <img src='{{ siteUrl }}img/icon-3.png'>
+      </div>
+      <div class='five columns'>
+        <p>When all share’s of a cow are purchased, that cow is delivered to our processing facility.</p>
+      </div>
+    </li>
+
+    <li class='row'>
+      <div class='one columns offset-by-two'>
+        <h1>4</h1>
+      </div>
+      <div class='two columns'>
+        <img src='{{ siteUrl }}img/icon-4.png'>
+      </div>
+      <div class='five columns'>
+        <p>Your cow is dry aged for 14 days.</p>
+      </div>
+    </li>
+
+    <li class='row'>
+      <div class='one columns offset-by-two'>
+        <h1>5</h1>
+      </div>
+      <div class='two columns'>
+        <img src='{{ siteUrl }}img/icon-5.png'>
+      </div>
+      <div class='five columns'>
+        <p>We process, vacuum pack, and weigh your cow then flash freeze your share at the height of freshness.</p>
+      </div>
+    </li>
+
+    <li class='row'>
+      <div class='one columns offset-by-two'>
+        <h1>6</h1>
+      </div>
+      <div class='two columns'>
+        <img src='{{ siteUrl }}img/icon-6.png'>
+      </div>
+      <div class='five columns'>
+        <p>We’ll send you a final invoice, once paid, we ship!</p>
+      </div>
+    </li>
+    </ul>
+  </div>
+
+
+{% include "_includes/cta" %}
+{% endblock %}

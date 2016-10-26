@@ -1,0 +1,40 @@
+{#
+ # News entry template
+ # -------------------
+ #
+ # This template gets loaded whenever a News entry’s URL is
+ # requested. That’s because the News section’s Template setting is
+ # set to “news/_entry”, the path to this template.
+ #
+ # When this template is loaded, it will already have an ‘entry’
+ # variable, set to the requested News entry.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+<div class='tan'>
+	<div class='container indv-post'>
+		<div class='twelve columns'>
+			<h1>{{ entry.title }}</h1>
+		</div>
+	</div>
+</div>
+
+<div class='container indv-post'>
+	<div class='row'>
+		<div class='eight columns offset-by-two news'>
+		{{ entry.body }}
+		</div>
+	</div>
+
+	<div class='share'>
+		<a href='#'><button class='facebook'>Share On Facebook</button></a>
+		<a href='#'><button class='twitter'>Share On Twitter</button></a>
+		<a href='#'><button class='email'>Share Via Email</button></a>
+	</div>
+</div>
+{% endblock %}

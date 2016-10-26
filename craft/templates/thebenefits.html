@@ -1,0 +1,100 @@
+{#
+ # thebenefits template
+ # ---------------
+ #
+ # When this template gets loaded, it will be because someone has accessed
+ # http://yoursite.com/ (without any URI). Craft checks to see if you have
+ # a Single section set to be the Homepage (as you do, by default), and
+ # loads the section’s Template (this file). A special ‘entry’ variable
+ # will already be set for you, assigned to the Homepage entry.
+ #
+ # It's worth noting that even if you didn't have a Homepage Single section,
+ # as long as this template remains at craft/templates/index.html, it
+ # would still be the one to get loaded when accessing http://yoursite.com/,
+ # albeit without an ‘entry’ variable already set for you.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+  <section class='interior-header interior-header-thebenefits'>
+    <h1><span class='interior'>The Benefits</span></h1>
+  </section>
+
+  <section class='red'>
+    <div class='container'>
+      <div class='row'>
+        <div class='ten columns offset-by-one center white'>
+          <p>We take pride in providing a wholesome product that’s 100% organic.</p>
+          <p>It truly is beef in it’s purest form.</p>
+        </div>
+        <div class='row benefits-intro'>
+          <div class='three columns center offset-by-one'>
+            <img src='{{ siteUrl }}img/icon-gmos.png'>
+            <h4>No GMO'S</h4>
+          </div>
+          <div class='three columns center offset-by-one'>
+            <img src='{{ siteUrl }}img/icon-antibiotics.png'>
+            <h4>NO ANTIBIOTICS</h4>
+          </div>
+          <div class='three columns center offset-by-one'>
+            <img src='{{ siteUrl }}img/icon-hormones.png'>
+            <h4>NO HORMONES</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class='row'>
+    <img src='{{ siteUrl }}img/thebenefits-1.png'>
+  </div>
+
+  <section class='tan'>
+  <div class="container row">
+    <div class='ten columns offset-by-one'>
+      <h1>One Rancher, One Butcher, Your Choice.</h1>
+      <p>We offer you the shortest, most transparent supply chain possible. When you purchase a beef share from IYC, guess where that beef is? It’s on the ranch, on 4 legs being a cow. it’s certainly not in a cold storage facility, waiting for you to place an order, increasing your cost. Ordering this way does add another step in the buying process; however, we believe the cost savings and the environmental impact outweigh any inconvenience. When you purchase a share of beef from us you’re actually purchasing a share of a cow on the ranch. That’s right, it’s your cow!</p>   
+    </div>
+  </div>
+  </section>
+
+  <div class='row'>
+    <img class='fullsix' src='{{ siteUrl }}img/thebenefits-2.png'>
+    <img class='fullsix' src='{{ siteUrl }}img/thebenefits-3.png'>
+  </div>
+
+  <section class='tan'>
+  <div class="container row">
+    <div class='ten columns offset-by-one'>
+      <h1>Join us, make a difference.</h1>
+      <p>As you stare at the thousands of products at the grocery store, does it frustrate you that our food supply is controlled by a few massive corporations, some foreign owned? How about that the money you spend goes back to those same corporations, not back into your community—to the farmer, the rancher, the butcher? It frustrates us. it doesn’t have to be this way. The beef we send you comes from one cow, your cow, born and raised on the Boettcher ranch in Nebraska. The most powerful way to effect change in our food system revolves around how you spend your dollar. Take back control of your food, one cow at a time. Make the commitment, be the change. It’s your choice, it’s your cow.</p>   
+    </div>
+  </div>
+  </section>
+  
+  <section class='cowshare'>
+    <div class="container">
+      <div class='row'>
+        <div class='ten columns offset-by-one center'>
+          <h1 class='white'>Cowshare your purchase!</h1>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='three columns'>
+          <img src='{{ siteUrl }}img/icon-cowshare.png'>
+        </div>
+        <div class='eight columns offset-by-one'>
+          <p class='white'>Do you want an even better deal? Once you make the choice, we’ll send you a confirmation email with a special member’s only code. Hit the link and share that code with your friends on social media. If any of your friends purchase from us we’ll take 10% off your order. We want to ship beef. Free advertising for us, less money for you. It’s a deal.</p>   
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+{% include "_includes/cta" %}
+{% endblock %}

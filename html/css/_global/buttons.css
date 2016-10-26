@@ -1,0 +1,110 @@
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  padding: 5px 80px 2px;
+  color: #c83232;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .3rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 40px;
+  border: 2px solid #c83232;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 225ms ease;
+  font-family: 'Sofia Pro';
+ }
+
+@media (max-width: 500px) {
+  .button, button {
+    display: block;
+    width: 100%;
+    padding: 5px 30px 2px;
+  }
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #fff;
+  border-color: #CF0A2C;
+  background-color: #CF0A2C;
+  outline: 0; }
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #CF0A2C;
+  border-color: #CF0A2C; }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #CF0A2C;
+  border-color: #CF0A2C; }
+
+
+button.tan {
+  background-color: #fcf7e8;
+  color: #CF0A2C;
+}
+
+button.tan:hover {
+  background-color: #ede8da;
+  color: #CF0A2C;
+}
+
+.btn-white {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.btn-white:hover {
+  background: #fff;
+  border-color: #fff;
+  color: #CF0A2C;
+}
+
+.btn-red {
+  border: 1px solid #c83232;
+  color: #fff;
+  background: #c83232;
+}
+
+.nav-cta {
+padding: 5px 30px 2px;
+line-height: 25px;
+margin-top: 0px;
+}
+
+@media (min-width: 800px) {
+.change {
+  margin-top: 20px;
+}
+}

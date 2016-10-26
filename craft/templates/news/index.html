@@ -1,0 +1,49 @@
+{#
+ # News index template
+ # -------------------
+ #
+ # This template is loaded whenever http://example.com/news is
+ # requested, because it is located at news/index.html in your
+ # craft/templates/ folder.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends "_layout" %}
+{% set title = "News" %}
+
+{% block content %}
+	<section class='red news-archive'>
+    <div class='container'>
+		<div class="row">
+			<div class='ten columns offset-by-one'>
+			  <h1 class='white header'>News</h1>
+			</div>
+		</div>
+
+		<div class="row">
+		{% paginate craft.entries.section('news').limit(3) as pageInfo, pageEntries %}
+		{% for entry in pageEntries %}
+			<div class='news-module four columns'>
+				<img src='{{ siteUrl }}img/4.png'>
+				<div class='news-module-text'>
+					<h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
+			        <h5>By: Jacob Wingebach</h5>
+					<h5>Posted on {{ entry.postDate.format('F d, Y') }}</h5>
+					<a href="{{ entry.url }}">Read More</a>
+				</div>
+			</div>
+		{% endfor %}
+
+		{% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl }}">Previous Page</a>{% endif %}
+		{% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl }}">Next Page</a>{% endif %}
+		</div>
+
+		<div class='pagination'>
+			{% include "_includes/pagination" %}
+		</div>
+    </div>
+  </section>
+{% endblock %}
+

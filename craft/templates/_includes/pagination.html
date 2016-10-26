@@ -1,0 +1,13 @@
+{% if pageInfo.totalPages > 1 %}
+<ul class='pagination'>
+	<li>{% if pageInfo.prevUrl %}<a href='{{ pageInfo.prevUrl }}'>Previous Page</a>{% endif %}</li>
+
+	<li>{% for page, url in pageInfo.getPrevUrls(1) %}<a href='{{ url }}'>{{ page }}</a>{% endfor %}</li>
+
+	<li><a class='current'>{{ pageInfo.currentPage }}</a></li>
+
+	<li>{% for page, url in pageInfo.getNextUrls(1) %}<a href='{{ url }}'>{{ page }}</a>{% endfor %}</li>
+
+	<li>{% if pageInfo.nextUrl %}<a href='{{ pageInfo.nextUrl }}'>Next Page</a>{% endif %}</li>
+</ul>
+{% endif %}
