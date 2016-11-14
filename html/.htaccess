@@ -1,18 +1,9 @@
 <IfModule mod_rewrite.c>
-# ------------------------------------------------------------
-# Remove index.php
-# ------------------------------------------------------------
+	RewriteEngine On
 
-RewriteCond %{THE_REQUEST} ^GET.*index\.php [NC]
-RewriteCond %{REQUEST_URI} !^/index\.php/admin\b [NC] # Don't mess with admin requests
-RewriteRule (.*?)index\.php/*(.*) /$1$2 [R=301,NE,L]
-
-# ---------------------------------------------------------------------   -
-# Send would-be 404 requests to Craft (standard Craft rewrite method)
-# ----------------------------------------------------------------------
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} !^/(favicon\.ico|apple-touch-icon.*\.png)$ [NC]
-RewriteRule (.+) /index.php?p=$1 [QSA,L]
+	# Send would-be 404 requests to Craft
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_URI} !^/(favicon\.ico|apple-touch-icon.*\.png)$ [NC]
+	RewriteRule (.+) index.php?p=$1 [QSA,L]
 </IfModule>
