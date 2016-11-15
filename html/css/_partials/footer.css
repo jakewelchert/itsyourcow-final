@@ -64,7 +64,7 @@ footer {
 
 	@media (min-width: 900px) {
 	.footer-right {
-		width: 55%;
+		width: 50%;
 		float: right;
 		min-height: 240px;
 	}
@@ -99,7 +99,7 @@ footer .footer-nav {
 
 @media (min-width: 900px) {
 .footer-right-1, .bottom-left {
-	width: 40%;
+	width: 50%;
 	float: left;
 	padding-bottom: 0;
 }
