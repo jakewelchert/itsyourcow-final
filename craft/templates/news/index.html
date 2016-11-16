@@ -25,15 +25,15 @@
 		<div class="row">
 		{% paginate craft.entries.section('news').limit(3) as pageInfo, pageEntries %}
 		{% for entry in pageEntries %}
-			<div class='news-module four columns'>
-				<img src='{{ siteUrl }}img/4.png'>
-				<div class='news-module-text'>
-					<h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
-			        <h5>By: Jacob Wingebach</h5>
-					<h5>Posted on {{ entry.postDate.format('F d, Y') }}</h5>
-					<a href="{{ entry.url }}">Read More</a>
-				</div>
-			</div>
+	        <div class='news-module four columns'>
+	          <img src='{{ siteUrl }}img/4.png'>
+	          <div class='news-module-text'>
+	            <h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
+	            <h5>{{ entry.authorName }}</h5>
+	            <h5>{{ entry.postDate | date("M d, Y") }}</h5>
+	            <a href='{{ entry.url }}'>Read More</a>
+	          </div>
+	        </div>
 		{% endfor %}
 
 		{% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl }}">Previous Page</a>{% endif %}
