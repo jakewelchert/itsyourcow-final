@@ -22,9 +22,8 @@
   <meta charset='utf-8' />
   <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}{% if tagline is defined %} - {{ tagline }}{% endif %}</title>
   <link rel='home' href='{{ siteUrl }}' />
-
-  <meta name="" content="">
-
+  {% hook 'seomaticRender' %}
+  <link rel='icon' type='image/gif' href='{{ siteUrl }}img/iyc_fav.gif'>
 	<link rel='stylesheet' href='{{ siteUrl }}css/master.css'>
   <link rel="stylesheet" href="{{ siteUrl }}dist/magnific-popup.css">
 
