@@ -133,8 +133,8 @@
           <img src='{{ siteUrl }}img/4.png'>
           <div class='news-module-text'>
             <h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
-            <h5>Author Name</h5>
-            <h5>News  /  May 10 2016</h5>
+            <h5>{{ entry.author.fullName }}</h5>
+            <h5>{{ entry.postDate | date("M d, Y") }}</h5>
             <a href='{{ entry.url }}'>Read More</a>
           </div>
         </div>
