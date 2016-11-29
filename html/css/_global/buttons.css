@@ -22,7 +22,7 @@ input[type="button"] {
   cursor: pointer;
   box-sizing: border-box;
   transition: all 225ms ease;
-  font-family: 'Sofia Pro';
+  font-family: 'sofia-pro';
  }
 
 @media (max-width: 500px) {
