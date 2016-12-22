@@ -75,22 +75,25 @@
   {% for asset in entry.fullWidthImage %}
   <img src='{{ asset.url }}' alt='{{ asset.title }}'>
   {% endfor %}
-
+  
   <section class='tan'>
     <div class="container">
       <div class="row">
         <div class='ten offset-by-one columns center'>
-          <h1 class='header'>The process is simple.</h1>
-          <p>Our supply chain goes like this: <strong>From the ranch, to the butcher, to you.</strong> No Feedlots, no cold storage facilities, no contracted processors, no middle men.</p>
-          <p>Everyone who handles your beef works for us. We maintain quality control of the entire experience. We are deeply vested in your experience with us, our livelihood depends on your satisfaction.</p>
-          <p class='red-txt'><strong>It’s Your Choice, It’s Your Cow.</strong></p>
+          <h1 class='header'>{{ entry.processHeader }}</h1>
+          {{ entry.processBody }}
+          <p class='red-txt'><strong>{{ entry.redIYCCallout }}</strong></p>
           <div class='process_logos'>
             <ul>
               <li>
-                <a target='_blank' href='http://www.americangrassfed.org/about-us/our-standards/'><img src='{{ siteUrl }}img/logo_americangrassfed.png'></a>
+              {% for asset in entry.processLogo1 %}
+                <a target='_blank' href='http://www.americangrassfed.org/about-us/our-standards/'><img src='{{ asset.url }}'></a>
+              {% endfor %}
               </li>
               <li>
-                <a target='_blank' href='https://www.ams.usda.gov/rules-regulations/organic'><img src='{{ siteUrl }}img/logo_usda.png'></a>
+              {% for asset in entry.processLogo2 %}
+                <a target='_blank' href='https://www.ams.usda.gov/rules-regulations/organic'><img src='{{ asset.url }}'></a>
+              {% endfor %}
               </li>
             </ul>
           </div>
@@ -100,8 +103,13 @@
   </section>
   
   <div class='row'>
-    <img class='fullsix' src='{{ siteUrl }}img/home-1.png'>
-    <img class='fullsix' src='{{ siteUrl }}img/home-2.png'>
+    {% for asset in entry.halfWidthImageLeft %}
+    <img class='fullsix' src='{{ asset.url }}' alt='{{ asset.title }}'>
+    {% endfor %}
+
+    {% for asset in entry.halfWidthImageRight %}
+    <img class='fullsix' src='{{ asset.url }}' alt='{{ asset.title }}'>
+    {% endfor %}
   </div>
   
   <section class='lightblue'>
