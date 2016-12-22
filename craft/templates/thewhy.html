@@ -21,49 +21,58 @@
 
 {% block content %}
   <section class='interior-header interior-header-thewhy'>
-    <h1><span class='interior'>The Why</span></h1>
+    <h1><span class='interior'>{{ entry.heroHeadline }}</span></h1>
   </section>
 
   <section class='tan'>
     <div class='container'>
       <div class='row'>
         <div class='six columns jacobandson'>
-          <img src='{{ siteUrl }}img/thewhy-header.png'>
+          {% for asset in entry.introJacob %}
+          <img src='{{ asset.url }}' alt='{{ asset.title }}'>
+          {% endfor %}
         </div>
 
         <div class='six columns'>
-          <p class='small'><strong><span class='red-txt'>Hi, my name is Jacob Wingebach.</span></strong></p>
-          <p class='small'>Our family’s quest for unadulterated meat began shortly after our oldest child was diagnosed with Autism. It was unbelievable to me how difficult it was to find the kind of meat we wanted for our family. It seemed like such a simple request—organic, grassfed meat, born and raised in the United States! Sometimes we could find organic, sometimes grassfed, rarely both and generally only a few different cuts, mostly hamburger; all of which cost a small fortune. Out of frustration and determination for change, we started It’s Your Cow.</p>    
+          <p class='small'><strong><span class='red-txt'>{{ entry.introHeadline }}</span></strong></p>
+          <p class='small'>{{ entry.introBody }}</p>    
         </div>
       </div>
     </div>
   </section>
 
   <div class='row'>
-    <img class='fullsix' src='{{ siteUrl }}img/thewhy-1.png'>
-    <img class='fullsix' src='{{ siteUrl }}img/thewhy-2.png'>
+    {% for asset in entry.halfWidthImageLeft %}
+    <img class='fullsix' src='{{ asset.url }}' alt='{{ asset.title }}'>
+    {% endfor %}
+
+    {% for asset in entry.halfWidthImageRight %}
+    <img class='fullsix' src='{{ asset.url }}' alt='{{ asset.title }}'>
+    {% endfor %}
   </div>
 
   <section class='red'>
     <div class="container row">
-      <img class='four columns thestate' src='{{ siteUrl }}img/thewhy-nebraska.png'>
+      {% for asset in entry.state %}
+      <img class='four columns thestate' src='{{ asset.url }}' alt='{{ asset.title }}'>
+      {% endfor %}
       <div class='eight columns'>
-        <p class='white'>Along the way we found The Boettcher family, who owns and operates Boettcher Organics near Bassett, Nebraska. In 2002 they transitioned to organic ranching after making dietary changes for one of their children, who was allergic to conventionally processed foods.</p>   
+        <p class='white'>{{ entry.boettcherInfo }}</p>   
       </div>
     </div>
   </section>
 
   <div class='row'>
-    <img class='twelve columns' src='{{ siteUrl }}img/thewhy-3.png'>    
+    {% for asset in entry.fullWidthImage %}
+    <img class='twelve columns' src='{{ asset.url }}' alt='{{ asset.title }}'>
+    {% endfor %} 
   </div>
 
   <section class='tan'>
   <div class="container row">
     <div class='ten columns offset-by-one'>
-      <h1>Country of origin?</h1>
-      <p><strong>Today, it’s harder than ever to know the details about your meat, and where it comes from.</strong> It’s no longer required to be labeled with the country of origin. If that’s not bad enough, the USDA repealed their grassfed standard in January, 2016. Pandora’s box is open. If you’re fortunate enough to live near a rancher or farmer who you’ve come to know and trust, consider yourself lucky. Please buy from them and support your local agriculture.</p> 
-      
-      <p><strong>If not, consider us—It’s Your Cow, as your sole source for beef!</strong></p>    
+      <h1>{{ entry.countryHeadline }}</h1>
+      <p>{{ entry.countryBody }}</p>    
     </div>
   </div>
   </section>
