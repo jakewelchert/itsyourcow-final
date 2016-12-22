@@ -24,9 +24,9 @@
     <div class='container-header-index'>
       <div class="row">
         <div class='ten columns index-headline offset-by-one'>
-          <h1>Integrity, transparency, & a wholesome product.</h1>
-          <h5 class='red-txt'><a href='https://www.ams.usda.gov/rules-regulations/organic'>100% Certified Organic</a>, <a href='http://www.americangrassfed.org/about-us/our-standards/'>Certified Grassfed Beef</a>.</br>Born and raised in the Sandhills of Nebraska, dry-aged 14 days.</h5>
-          <a href='http://its-your-cow.myshopify.com/products/1-4-of-a-beef'><button class='btn-red'>Buy A Cow</button></a>
+          <h1>{{ entry.heroHeadline }}</h1>
+          {{ entry.heroSubheadline }}
+          <a href='{{ entry.heroButtonLinkURL }}'><button class='btn-red'>{{ entry.heroButtonText }}</button></a>
         </div>
       </div>
     </div>
@@ -35,10 +35,9 @@
   <section class='tan about'>
     <div class='home-about'>
       <div class='home-about_copy ambient-video'>
-          <div class="button-container center">
-            <a href="https://vimeo.com/190891502" class="button ghost popup-vimeo">Play Video</a>
-            </div>
-          </div>
+        <div class="button-container center">
+          <a href="{{ entry.videoVimeoURL }}" class="button ghost popup-vimeo">{{ entry.videoButtonText }}</a>
+        </div>
       </div>
     </div>
   </section>
@@ -47,36 +46,35 @@
     <div class="container">
       <div class="row">
         <div class='twelve columns'>
-          <h1 class='header'>We’re trying to change things.</h1>
+          <h1 class='header'>{{ entry.aboutHeadline }}</h1>
         </div>
       </div>
       <div class="row">
-        <div class='ten center columns offset-by-one'>
-          <p>It’s Your Cow specifically addresses the lack of access and transparency when buying wholesome beef at the grocery store or online.</p>
-          <p>How do we do it? Simple:</p>
-        </div>
+        <div class='ten center columns offset-by-one'>{{ entry.aboutDescription }}</div>
       </div>
       <div class='row center howwedoit'>
         <div class='four columns'>
-          <h1>#1</h1>
-          <p>We raise the cattle in the Sandhills of Nebraska.</p>
+          <h1>{{ entry.aboutHow1 }}</h1>
+          <p>{{ entry.aboutHow1Description }}</p>
         </div>
         <div class='four columns'>
-          <h1>#2</h1>
-          <p>We own and operate the processing facility.</p>
+          <h1>{{ entry.aboutHow2 }}</h1>
+          <p>{{ entry.aboutHow2Description }}</p>
         </div>
         <div class='four columns'>
-          <h1>#3</h1>
-          <p>All your beef comes from one cow—your cow.</p>
+          <h1>{{ entry.aboutHow3 }}</h1>
+          <p>{{ entry.aboutHow3Description }}</p>
         </div>
       </div>
       <div class='row center'>
-        <a href='{{ url('thewhy.html') }}'><button class='btn-red change'>Learn Our Story</button></a>
+        <a href='{{ entry.aboutButtonURL }}'><button class='btn-red change'>{{ entry.aboutButtonText }}</button></a>
       </div>
     </div>
   </section>
 
-  <img src='{{ siteUrl }}img/cattle-home.png'>
+  {% for asset in entry.fullWidthImage %}
+  <img src='{{ asset.url }}' alt='{{ asset.title }}'>
+  {% endfor %}
 
   <section class='tan'>
     <div class="container">

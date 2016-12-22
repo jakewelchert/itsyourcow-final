@@ -185,3 +185,32 @@ h5.header {
 .product-meat {
 	padding-bottom: 40px;
 }
+
+
+.product-list {
+	width: 100%;
+}
+
+@media (min-width: 800px) {
+.product-list {
+	width: 50%;
+	float: left;
+}	
+}
+
+.product-list li {
+	margin-bottom: 0rem;
+	margin-left: 16px;
+}
+
+.product-list li p {
+	margin-bottom: 5px;
+}
+
+.product-disc {
+	font-size: 14px;
+}
+
+.product-dry-age, .product-cuts {
+	margin-top: 100px
+}
