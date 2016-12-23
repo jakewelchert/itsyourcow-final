@@ -18,31 +18,41 @@
  #}
 
 {% extends "_layout" %}
-
 {% block content %}
-  <section class='interior-header interior-header-thebenefits'>
-    <h1><span class='interior'>The Benefits</span></h1>
+
+{% set image = entry.interiorHeaderImage.first() %}
+  {% if image %}
+  <section class='interior-header interior-header-thebenefits' style='background-image:url({{ image.getURL() }})'>
+  {% endif %}
+    <h1><span class='interior'>{{ entry.heroHeadline }}</span></h1>
   </section>
+
+
 
   <section class='red'>
     <div class='container'>
       <div class='row'>
         <div class='ten columns offset-by-one center white'>
-          <p>We take pride in providing a wholesome product that’s 100% organic.</p>
-          <p>It truly is beef in it’s purest form.</p>
+        {{ entry.benefitsIcons }}
         </div>
         <div class='row benefits-intro'>
           <div class='three columns center offset-by-one'>
-            <img src='{{ siteUrl }}img/icon-gmos.png'>
-            <h4>No GMO'S</h4>
+          {% for asset in entry.benefitsIcon1 %}
+          <img src='{{ asset.url }}' alt='{{ asset.title }}'>
+          {% endfor %}             
+          <h4>{{ entry.benefitsDescription1 }}</h4>
           </div>
           <div class='three columns center offset-by-one'>
-            <img src='{{ siteUrl }}img/icon-antibiotics.png'>
-            <h4>NO ANTIBIOTICS</h4>
+          {% for asset in entry.benefitsIcon2 %}
+          <img src='{{ asset.url }}' alt='{{ asset.title }}'>
+          {% endfor %}
+          <h4>{{ entry.benefitsDescription2 }}</h4>
           </div>
           <div class='three columns center offset-by-one'>
-            <img src='{{ siteUrl }}img/icon-hormones.png'>
-            <h4>NO HORMONES</h4>
+          {% for asset in entry.benefitsIcon3 %}
+          <img src='{{ asset.url }}' alt='{{ asset.title }}'>
+          {% endfor %}
+          <h4>{{ entry.benefitsDescription3 }}</h4>
           </div>
         </div>
       </div>
@@ -50,28 +60,35 @@
   </section>
 
   <div class='row'>
-    <img src='{{ siteUrl }}img/thebenefits-1.png'>
+    {% for asset in entry.fullWidthImage %}
+    <img class='twelve columns' src='{{ asset.url }}' alt='{{ asset.title }}'>
+    {% endfor %} 
   </div>
 
   <section class='tan'>
   <div class="container row">
     <div class='ten columns offset-by-one'>
-      <h1>One Rancher, One Butcher, Your Choice.</h1>
-      <p>We offer you the shortest, most transparent supply chain possible. When you purchase a beef share from IYC, guess where that beef is? It’s on the ranch, on four legs being a cow. It’s certainly not in a cold storage facility, waiting for you to place an order, increasing your cost. Ordering this way does add another step in the buying process. However, we hope you agree the cost savings and environmental impact outweigh any inconvenience. When you purchase a share of beef from us you’re actually purchasing a share of a cow on the ranch. That’s right, It’s Your Cow!</p>   
+      <h1>{{ entry.countryHeadline }}</h1>
+      <p>{{ entry.countryBody }}</p>    
     </div>
   </div>
   </section>
 
   <div class='row'>
-    <img class='fullsix' src='{{ siteUrl }}img/thebenefits-2.png'>
-    <img class='fullsix' src='{{ siteUrl }}img/thebenefits-3.png'>
+    {% for asset in entry.halfWidthImageLeft %}
+    <img class='fullsix' src='{{ asset.url }}' alt='{{ asset.title }}'>
+    {% endfor %}
+
+    {% for asset in entry.halfWidthImageRight %}
+    <img class='fullsix' src='{{ asset.url }}' alt='{{ asset.title }}'>
+    {% endfor %}
   </div>
 
   <section class='tan'>
   <div class="container row">
     <div class='ten columns offset-by-one'>
-      <h1>Join us, make a difference.</h1>
-      <p>As you stare at the thousands of products at the grocery store, does it frustrate you that our food supply is controlled by a few massive corporations, some foreign owned? How about that the money you spend goes back to those same corporations, not back into your community—to the farmer, the rancher, the butcher? It frustrates us. It doesn’t have to be this way. The beef we send you comes from one cow, your cow, born and raised on the Boettcher ranch in Nebraska. The most powerful way to effect change depends on how you spend your dollar. Take back control of your food, one cow at a time. Make the commitment, be the change. <span class='red-txt'><strong>It’s Your Choice, It’s Your Cow.</strong></p>
+      <h1>{{ entry.joinusHeadline }}</h1>
+      <p>{{ entry.joinusBody }}</p>    
     </div>
   </div>
   </section>
@@ -80,21 +97,22 @@
     <div class="container">
       <div class='row'>
         <div class='ten columns offset-by-one center'>
-          <h1 class='white'>Cowsource your purchase!</h1>
+          <h1 class='white'>{{ entry.cowsourceHeadline }}</h1>
         </div>
       </div>
 
       <div class='row'>
         <div class='three columns'>
-          <img src='{{ siteUrl }}img/icon-cowshare.png'>
+          {% for asset in entry.cowsourceIcon %}
+          <img src='{{ asset.url }}' alt='{{ asset.title }}'>
+          {% endfor %}
         </div>
         <div class='eight columns offset-by-one'>
-          <p class='white'>Do you want an even better deal? Once you make the choice, we’ll send you a confirmation email with a unique referral code to share. If any of your friends or family purchase from us using the code, we’ll take 5% off your next order. We want to ship beef. Good advertising for us, less money for you. It’s a deal.</p>   
+          <p class='white'>{{ entry.cowsourceBody }}</p>   
         </div>
       </div>
     </div>
   </section>
-
   
 {% include "_includes/cta" %}
 {% endblock %}

@@ -120,11 +120,9 @@
           <p>{{ entry.ctaBody }}</p>
           <a href='{{ entry.ctaButtonURL }}'><button class='btn-red'>{{ entry.ctaButtonText }}</button></a>
         </div>
-
         {% for asset in entry.ctaImage %}
           <img class='five columns' src='{{ asset.url }}' alt='{{ asset.title }}'>
         {% endfor %}
-
       </div>
     </div>
   </section>

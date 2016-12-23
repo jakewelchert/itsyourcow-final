@@ -20,7 +20,11 @@
 {% extends "_layout" %}
 
 {% block content %}
-  <section class='interior-header interior-header-thewhy'>
+
+{% set image = entry.interiorHeaderImage.first() %}
+  {% if image %}
+  <section class='interior-header interior-header-thewhy' style='background-image:url({{ image.getURL() }})'>
+  {% endif %}
     <h1><span class='interior'>{{ entry.heroHeadline }}</span></h1>
   </section>
 
