@@ -26,7 +26,11 @@
 		{% paginate craft.entries.section('news').limit(3) as pageInfo, pageEntries %}
 		{% for entry in pageEntries %}
 	        <div class='news-module four columns'>
-	          <img src='{{ siteUrl }}img/4.png'>
+
+	          {% for asset in entry.previewImage %}
+	          <img src='{{ asset.url }}' alt='{{ asset.title }}'>
+	          {% endfor %}
+
 	          <div class='news-module-text'>
 	            <h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
 	            <h5>{{ entry.authorName }}</h5>
