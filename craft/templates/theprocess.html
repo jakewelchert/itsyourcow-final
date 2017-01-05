@@ -22,88 +22,34 @@
 {% block content %}
 
   <section class='process-header interior-header-theprocess'>
-    <h1>Ready to make the choice?</h1>
-    <p class='txt-cntr'>Here's how the process works:</p>
+    <h1>{{ entry.heroHeadline }}</h1>
+    <p class='txt-cntr'>{{ entry.heroSubheadline }}</p>
   </section>
 
   <div class='container process-container'>
     <ul class='theprocess'>
-    <li class='row'>
-      <div class='number-header'>
-        <div class='one columns offset-by-two'>
-          <h1>1</h1>
+      {% for block in entry.processSteps %}
+      <li class='row'>
+        <div class='number-header'>
+          <div class='one columns offset-by-two'>
+            <h1>{{ block.processNumber }}</h1>
+          </div>
+
+          <div class='two columns'>
+              {% set image = block.processIcon.first() %}
+              {% if image %}
+              <img src='{{ image.getUrl }}' alt='{{ image.title }}'>
+              {% endif %}
+          </div>
         </div>
-        <div class='two columns'>
-          <img src='{{ siteUrl }}img/icon-1.png'>
+
+        <div class='five columns'>
+          <p>{{ block.processDescription }}</p>
         </div>
-      </div>
-      <div class='five columns'>
-        <p>We list shares of certified organic, certified grassfed cows; in eighths or quarters.</p>
-      </div>
-    </li>
-
-    <li class='row'>
-      <div class='one columns offset-by-two'>
-        <h1>2</h1>
-      </div>
-      <div class='two columns'>
-        <img src='{{ siteUrl }}img/icon-2.png'>
-      </div>
-      <div class='five columns'>
-        <p>You make the choice and purchase a share. <strong>Cowsource for 5% off.</strong></p>
-      </div>
-    </li>
-
-    <li class='row'>
-      <div class='one columns offset-by-two'>
-        <h1>3</h1>
-      </div>
-      <div class='two columns'>
-        <img src='{{ siteUrl }}img/icon-3.png'>
-      </div>
-      <div class='five columns'>
-        <p>When all share’s of a cow are purchased, that cow is delivered to our processing facility.</p>
-      </div>
-    </li>
-
-    <li class='row'>
-      <div class='one columns offset-by-two'>
-        <h1>4</h1>
-      </div>
-      <div class='two columns'>
-        <img src='{{ siteUrl }}img/icon-4.png'>
-      </div>
-      <div class='five columns'>
-        <p>Your cow is dry-aged for 14 days.</p>
-      </div>
-    </li>
-
-    <li class='row'>
-      <div class='one columns offset-by-two'>
-        <h1>5</h1>
-      </div>
-      <div class='two columns'>
-        <img src='{{ siteUrl }}img/icon-5.png'>
-      </div>
-      <div class='five columns'>
-        <p>We process, vacuum pack, and weigh your cow then flash freeze your share at the height of freshness.</p>
-      </div>
-    </li>
-
-    <li class='row'>
-      <div class='one columns offset-by-two'>
-        <h1>6</h1>
-      </div>
-      <div class='two columns'>
-        <img src='{{ siteUrl }}img/icon-6.png'>
-      </div>
-      <div class='five columns'>
-        <p>We’ll send you a final invoice, once paid, we ship!</p>
-      </div>
-    </li>
+      </li>
+      {% endfor %}
     </ul>
   </div>
-
 
 {% include "_includes/cta" %}
 {% endblock %}
